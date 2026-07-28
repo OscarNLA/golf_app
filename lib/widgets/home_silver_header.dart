@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:golf_app/widgets/notification_button.dart';
 
 class HomeSliverHeader extends StatelessWidget {
   const HomeSliverHeader({super.key});
@@ -14,7 +15,6 @@ class HomeSliverHeader extends StatelessWidget {
       pinned: false,
       floating: false,
       expandedHeight: 300,
-
       flexibleSpace: FlexibleSpaceBar(
         collapseMode: CollapseMode.parallax,
         background: Stack(
@@ -41,39 +41,15 @@ class HomeSliverHeader extends StatelessWidget {
 
             SafeArea(
               child: Padding(
-                padding: const EdgeInsets.fromLTRB(24, 24, 24, 24),
+                padding: const EdgeInsets.fromLTRB(24, 1, 24, 24),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
+                    /// Top Bar
                     Row(
                       children: [
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Bienvenido",
-                                style: TextStyle(
-                                  color: Colors.white.withValues(alpha: .85),
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w300,
-                                ),
-                              ),
+                        const NotificationButton(notificationCount: 3),
 
-                              const SizedBox(height: 4),
-
-                              const Text(
-                                "Oscar",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 40,
-                                  fontWeight: FontWeight.bold,
-                                  height: 1,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
+                        const Spacer(),
 
                         Container(
                           width: 72,
@@ -92,8 +68,41 @@ class HomeSliverHeader extends StatelessWidget {
                       ],
                     ),
 
+                    const Spacer(),
+
+                    /// Welcome
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Bienvenido",
+                            style: TextStyle(
+                              color: Colors.white.withValues(alpha: .85),
+                              fontSize: 20,
+                              fontWeight: FontWeight.w300,
+                            ),
+                          ),
+
+                          const SizedBox(height: 4),
+
+                          const Text(
+                            "Oscar",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 40,
+                              fontWeight: FontWeight.bold,
+                              height: 1,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+
                     const SizedBox(height: 24),
 
+                    /// Current Game Card
                     ClipRRect(
                       borderRadius: BorderRadius.circular(22),
                       child: BackdropFilter(
