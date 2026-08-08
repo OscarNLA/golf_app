@@ -5,17 +5,12 @@ import 'package:golf_app/models/hole_model.dart';
 
 class GameModel {
   final String id;
-
   final GameType gameType;
-
   final GolfCourse course;
-
   final DateTime date;
-
   final bool isOpen;
-
+  final int holesCount;
   final List<GamePlayerModel> players;
-
   final List<HoleModel> holes;
 
   const GameModel({
@@ -24,6 +19,7 @@ class GameModel {
     required this.course,
     required this.date,
     required this.isOpen,
+    required this.holesCount,
     required this.players,
     required this.holes,
   });

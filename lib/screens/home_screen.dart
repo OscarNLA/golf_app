@@ -3,6 +3,7 @@ import 'package:golf_app/screens/live_game_screen.dart';
 import 'package:golf_app/widgets/glass_button.dart';
 import 'package:golf_app/widgets/home_silver_header.dart';
 import 'package:golf_app/screens/scorecard_screen.dart';
+import 'package:golf_app/screens/new_game_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -29,7 +30,7 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const ScorecardScreen(),
+                        builder: (_) => const NewGameScreen(),
                       ),
                     );
                   },
