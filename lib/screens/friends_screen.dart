@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:golf_app/widgets/FriendCard.dart';
+import 'package:golf_app/widgets/friend_added_card.dart';
 import 'package:golf_app/widgets/add_friend_modal.dart';
 import 'package:golf_app/widgets/glass_button.dart';
 
@@ -30,11 +30,11 @@ class FriendsScreen extends StatelessWidget {
               Expanded(
                 child: ListView(
                   children: const [
-                    FriendCard(name: "Juan Perez", handicap: "12.4"),
+                    FriendAddedCard(name: "Juan Perez", handicap: "12.4"),
                     SizedBox(height: 16),
-                    FriendCard(name: "Carlos Ruiz", handicap: "8.7"),
+                    FriendAddedCard(name: "Carlos Ruiz", handicap: "8.7"),
                     SizedBox(height: 16),
-                    FriendCard(name: "Miguel Flores", handicap: "15.2"),
+                    FriendAddedCard(name: "Miguel Flores", handicap: "15.2"),
                   ],
                 ),
               ),

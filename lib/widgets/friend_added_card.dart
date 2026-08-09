@@ -1,25 +1,35 @@
+
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-class FriendCard extends StatelessWidget {
+class FriendAddedCard extends StatelessWidget {
   final String name;
   final String handicap;
 
-  const FriendCard({super.key, required this.name, required this.handicap});
+  const FriendAddedCard({
+    super.key,
+    required this.name,
+    required this.handicap,
+  });
 
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(24),
       child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
+        filter: ImageFilter.blur(
+          sigmaX: 20,
+          sigmaY: 20,
+        ),
         child: Container(
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
             color: Colors.white.withValues(alpha: .08),
             borderRadius: BorderRadius.circular(24),
-            border: Border.all(color: Colors.white.withValues(alpha: .12)),
+            border: Border.all(
+              color: Colors.white.withValues(alpha: .12),
+            ),
           ),
           child: Row(
             children: [
@@ -27,11 +37,16 @@ class FriendCard extends StatelessWidget {
                 width: 65,
                 height: 65,
                 decoration: BoxDecoration(
-                  border: Border.all(color: const Color(0xFF90C462), width: 2),
+                  border: Border.all(
+                    color: const Color(0xFF90C462),
+                    width: 2,
+                  ),
                   shape: BoxShape.circle,
                 ),
                 child: const CircleAvatar(
-                  backgroundImage: AssetImage("assets/profile.jpeg"),
+                  backgroundImage: AssetImage(
+                    "assets/profile.jpeg",
+                  ),
                 ),
               ),
 
@@ -63,7 +78,10 @@ class FriendCard extends StatelessWidget {
                 ),
               ),
 
-              const Icon(Icons.chevron_right, color: Colors.white54),
+              const Icon(
+                Icons.chevron_right,
+                color: Colors.white54,
+              ),
             ],
           ),
         ),

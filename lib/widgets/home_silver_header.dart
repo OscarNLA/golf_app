@@ -47,7 +47,7 @@ class HomeSliverHeader extends StatelessWidget {
                     /// Top Bar
                     Row(
                       children: [
-                        const NotificationButton(notificationCount: 3),
+                        const NotificationButton(),
 
                         const Spacer(),
 
